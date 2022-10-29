@@ -1,4 +1,4 @@
-## Exercicio de interação como uma livraria.
+## Exercicio de interação com uma livraria.
 
 - No exercício você pode informar o nome do leitor, o nome de um livro e atribuir características e ações para ele. :zap:
 - As Características que você pode atribuir ao leitor são: nome, idade e sexo. :zap:
