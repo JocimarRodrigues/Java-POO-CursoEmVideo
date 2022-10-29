@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package exerciciocontabanco;
 
-/**
- *
- * @author sousu
- */
 public class Banco {
 
     public int numConta;
@@ -62,14 +54,14 @@ public class Banco {
     }
 
     public void abrirConta(String t) {
-        this.setTipoConta(t); // Note que tu SEMPRE precisa usar o "this"
+        this.setTipoConta(t);
         this.setStatus(true);
         if (t == "corrente") {
-            //this.saldo = 50;  Aqui tu mexe diretamente no atributo
-            this.setSaldo(150); // Aqui tu vai mexer no método; DAR PREFERENCIA PRA ESSE
+
+            this.setSaldo(150);
 
         } else if (t == "poupanca") {
-            //this.saldo = 150; Aqui tu mexe diretamente no atributo
+
             this.setSaldo(50);
         }
     }
@@ -84,35 +76,35 @@ public class Banco {
             System.out.println("Conta fechada com sucesso!");
         }
     }
-    
+
     public void depositar(float valor) {
-       if(status == true){
-           saldo = saldo + valor;
-           System.out.println("O valor na conta é: " + this.saldo);
-       } else {
-           System.out.println("Problema na conta, impossível depositar!");
-       }
+        if (status == true) {
+            saldo = saldo + valor;
+            System.out.println("O valor na conta é: " + this.saldo);
+        } else {
+            System.out.println("Problema na conta, impossível depositar!");
+        }
     }
-    
-    public void sacar(float valor){
-        if(status == true && saldo > 0){
+
+    public void sacar(float valor) {
+        if (status == true && saldo > 0) {
             saldo = saldo - valor;
-            if (valor > saldo){
+            if (valor > saldo) {
                 System.out.println("Saldo insuficiente!");
             } else {
                 System.out.println("Saque no valor de: " + valor + " o novo saldo é: " + this.saldo);
             }
-            
-        } else if (status == false || saldo <= 0){
+
+        } else if (status == false || saldo <= 0) {
             System.out.println("Problema na conta, impossível sacar!");
         }
     }
 
-    public void pagarMensalidade(){
-        if (status == true && this.tipoConta == "corrente"){
+    public void pagarMensalidade() {
+        if (status == true && this.tipoConta == "corrente") {
             saldo = saldo - 12;
             System.out.println("A mensalidade no valor de 12 reais foi paga! O novo saldo é: " + this.saldo);
-        } else if (status == true && this.tipoConta == "poupanca"){
+        } else if (status == true && this.tipoConta == "poupanca") {
             saldo = saldo - 20;
             System.out.println("A mensalidade no valor de 20 reais foi paga! O novo saldo é: " + this.saldo);
         }
