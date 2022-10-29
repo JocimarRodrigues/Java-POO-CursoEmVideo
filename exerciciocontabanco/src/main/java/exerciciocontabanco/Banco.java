@@ -1,7 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package exerciciocontabanco;
+
 /**
  *
- * @author Jocimar
+ * @author sousu
  */
 public class Banco {
 
@@ -10,16 +15,7 @@ public class Banco {
     private String dono;
     private float saldo;
     private boolean status;
-    public void estadoAtual(){
-        System.out.println("--------------------------------");
-        System.out.println("Conta: " + this.getNumConta());
-        System.out.println("Tipo:" + this.getTipoConta());
-        System.out.println("Dono: " + this.getDono());
-        System.out.println("Saldo: " + this.getSaldo());
-        System.out.println("Status: " + this.getStatus());
-        System.out.println("--------------------------------");
-        
-    }
+
     public Banco() {
         saldo = 0;
         status = false;
@@ -66,17 +62,15 @@ public class Banco {
     }
 
     public void abrirConta(String t) {
-        this.setTipoConta(t); 
+        this.setTipoConta(t); // Note que tu SEMPRE precisa usar o "this"
         this.setStatus(true);
-        if ("corrente".equals(t)) {          
-            this.setSaldo(150);
-            System.out.println("Conta aberta com sucesso!");
-            System.out.println("O usuário escolheu uma conta corrente e ganhou 150R$ como bônus!");
+        if (t == "corrente") {
+            //this.saldo = 50;  Aqui tu mexe diretamente no atributo
+            this.setSaldo(150); // Aqui tu vai mexer no método; DAR PREFERENCIA PRA ESSE
 
-        } else if ("poupanca".equals(t)) {
+        } else if (t == "poupanca") {
+            //this.saldo = 150; Aqui tu mexe diretamente no atributo
             this.setSaldo(50);
-            System.out.println("Conta aberta com sucesso!");
-            System.out.println("O usuário escolheu uma conta poupança e ganhou 50R$ como bônus!");
         }
     }
 
@@ -86,44 +80,41 @@ public class Banco {
         } else if (this.saldo < 0) {
             System.out.println("Você tem débitos a conta não pode ser fechada");
         } else if (this.saldo == 0) {
-            System.out.println("Conta fechada com sucesso!");
             this.setStatus(false);
+            System.out.println("Conta fechada com sucesso!");
         }
     }
-
+    
     public void depositar(float valor) {
-        if (status == true) {
-            saldo = saldo + valor;
-            System.out.println("Depósito realizado na conta do: " + this.dono + " no valor de: " + valor);
-        } else {
-            System.out.println("Problema na conta, impossível depositar!");
-        }
+       if(status == true){
+           saldo = saldo + valor;
+           System.out.println("O valor na conta é: " + this.saldo);
+       } else {
+           System.out.println("Problema na conta, impossível depositar!");
+       }
     }
-
-    public void sacar(float valor) {
-        if (status == true && saldo > 0) {
+    
+    public void sacar(float valor){
+        if(status == true && saldo > 0){
             saldo = saldo - valor;
-            System.out.println("Saque realizado na conta do: " + this.dono + " no valor de: " + valor);
-            if (valor > saldo) {
+            if (valor > saldo){
                 System.out.println("Saldo insuficiente!");
             } else {
+                System.out.println("Saque no valor de: " + valor + " o novo saldo é: " + this.saldo);
             }
-
-        } else if (status == false || saldo <= 0) {
+            
+        } else if (status == false || saldo <= 0){
             System.out.println("Problema na conta, impossível sacar!");
         }
     }
 
-    public void pagarMensalidade() {
-        if (status == true && "corrente".equals(this.tipoConta)) {
+    public void pagarMensalidade(){
+        if (status == true && this.tipoConta == "corrente"){
             saldo = saldo - 12;
-            System.out.println("Mensalidade de 12 reais");
-        } else if (status == true && "poupanca".equals(this.tipoConta)) {
+            System.out.println("A mensalidade no valor de 12 reais foi paga! O novo saldo é: " + this.saldo);
+        } else if (status == true && this.tipoConta == "poupanca"){
             saldo = saldo - 20;
-            System.out.println("Mensalidade de 20 reais");
-
+            System.out.println("A mensalidade no valor de 20 reais foi paga! O novo saldo é: " + this.saldo);
         }
     }
-    
 }
-    
