@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package exerciciolivraria;
 
 import java.util.Random;
 
-/**
- *
- * @author sousu
- */
 public class Livro implements Publicacao {
     private String titulo;
     private String autor;
@@ -18,12 +10,12 @@ public class Livro implements Publicacao {
     private boolean aberto;
     private Pessoa leitor;
     
-    public Livro (String titulo,String autor,int totPaginas,int pagAtual, Pessoa leitor){ // Note que aqui se tu for usar vetor, tu precisa colocar o Pessoa leitor
+    public Livro (String titulo,String autor,int totPaginas,int pagAtual, Pessoa leitor){ 
         this.titulo = titulo;
         this.autor = autor;
         this.totPaginas = totPaginas;
         this.pagAtual = pagAtual;
-        this.leitor = leitor; // O erro que tava dando é q tu não tinha colocado o leitor aqui; aí ele não estava recebendo valor!
+        this.leitor = leitor; 
         
 
         
@@ -69,7 +61,7 @@ public class Livro implements Publicacao {
         this.aberto = aberto;
     }
     
-    public Pessoa getLeitor(){ // Aqui tu pegou a outra classe Pessoa, com nome, idade e sexo e colocou para substituir o leitor
+    public Pessoa getLeitor(){ 
         return leitor;
     }
     
@@ -77,15 +69,11 @@ public class Livro implements Publicacao {
         this.leitor = leitor;
     }
     
-    public String detalhes(){ // Aqui eu mudei o void por String e aí eu posso usar o return com uma String, O /n serve para quebrar uma linha!
+    public String detalhes(){ 
         return "Livro{" + " Titulo do livro: " + titulo + "\n Autor: " + autor + "\n Total de páginas do livro: " + totPaginas + "\n Página atual: " + pagAtual + "\n O livro está aberto?" + aberto + "\n Leitor: " + leitor.getNome() + " idade do leitor: " + leitor.getIdade() + " sexo do leitor: " + leitor.getSexo() + "}"; // Posso usar esse método ou o usando o void com Sout
-        /*System.out.println("O título do livro é: " + this.getTitulo()); 
-        System.out.println("O autor do livro é: " + this.getAutor());
-        System.out.println("O total de pagínas é: " + this.getTotPaginas());
-        System.out.println("O nome do leitor do livro é: " + this.getLeitor()); */
+       
     }
     
-   // PArei aqui, preciso colocar os Override
     
     @Override
     public void abrir(){

@@ -1,14 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package exerciciolivraria;
 
-/**
- *
- * @author sousu
- */
 public class ExercicioLivraria {
 
     public static void main(String[] args) {    
@@ -27,14 +18,6 @@ public class ExercicioLivraria {
         livro[2].voltarPag();
         System.out.println(livro[2].detalhes());
         
-        
-        /*Livro leitor1 = new Livro("Got", "Martin", 200, 50, "John");
-        System.out.println(leitor1.detalhes());
-        leitor1.abrir();
-        leitor1.folhear();
-        leitor1.avancarPag();
-        leitor1.voltarPag();
-        }*/
             
         
     
