@@ -1,7 +1,5 @@
 package exercicioluta;
 
-import java.util.ArrayList;
-
 public class Cadastro implements Dados{
     private String nome;
     private String nacionalidade;

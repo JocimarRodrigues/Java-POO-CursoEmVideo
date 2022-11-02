@@ -19,8 +19,8 @@ public class ExercicioLuta {
        Luta PrimeiraLuta = new Luta();
        PrimeiraLuta.marcarLuta(lutador[4], lutador[5]); 
        PrimeiraLuta.lutar();
-       lutador[0].status();
-       lutador[1].status();
+       lutador[4].status();
+       lutador[5].status();
     }
       
 }
