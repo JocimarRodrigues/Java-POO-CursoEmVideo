@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetopessoas;
 
-/**
- *
- * @author sousu
- */
-public class Aluno extends Pessoa { //Esse extends irá fazer essa classe Aluno virar uma subclasse/filha da classe Pessoa.
+public class Aluno extends Pessoa { 
     private int matricula;
     private String curso;
     

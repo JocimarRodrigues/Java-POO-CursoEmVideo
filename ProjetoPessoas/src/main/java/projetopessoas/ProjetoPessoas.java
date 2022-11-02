@@ -1,19 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package projetopessoas;
 
-/**
- *
- * @author sousu
- */
 public class ProjetoPessoas {
 
     public static void main(String[] args) {
         Pessoa pessoa1 = new Pessoa();
-        Aluno pessoa2 = new Aluno(); // Prestar atenção aqui, tu coloca a subclasse e não a classe; senão dá erro!
+        Aluno pessoa2 = new Aluno(); 
         Professor pessoa3 = new Professor();
         Funcionario pessoa4 = new Funcionario();
         
@@ -36,7 +27,7 @@ public class ProjetoPessoas {
         
         pessoa3.receberAumento(550.20f);
         
-        System.out.println(pessoa1.toString()); // Aqui é para retornar a string q tá dentro da classe mãe
+        System.out.println(pessoa1.toString());
         System.out.println(pessoa2.toString());
         System.out.println(pessoa3.toString());
     }

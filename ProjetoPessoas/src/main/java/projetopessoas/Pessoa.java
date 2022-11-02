@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package projetopessoas;
 
-/**
- *
- * @author sousu
- */
 public class Pessoa {
     private String nome;
     private int idade;
@@ -42,7 +34,7 @@ public class Pessoa {
     }
 
     @Override
-    public String toString() { // toString é para retornar uma String
+    public String toString() {
         return "Pessoa{" + "nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + '}';
     }
     
