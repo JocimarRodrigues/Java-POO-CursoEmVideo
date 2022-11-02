@@ -15,10 +15,10 @@ public class PlayVideos {
        
        Visualizacao visualizacao[] = new Visualizacao[5];
        visualizacao[0] = new Visualizacao(gafanhoto[0], video[2]);
-       visualizacao[0].avaliar(); // Aqui foi o avaliar sem parametro irá receber "5"
+       visualizacao[0].avaliar();
        System.out.println(visualizacao[0].toString());
        visualizacao[1] = new Visualizacao(gafanhoto[0], video[1]); 
-       visualizacao[0].avaliar(87.0f); // Aqui a avaliação foi pela porcentagem do vídeo, no caso vai receber 8
+       visualizacao[0].avaliar(87.0f);
        System.out.println(visualizacao[1].toString());
                               
     }
