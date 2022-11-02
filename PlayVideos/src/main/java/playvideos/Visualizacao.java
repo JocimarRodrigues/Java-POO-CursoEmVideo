@@ -1,22 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package playvideos;
 
-/**
- *
- * @author sousu
- */
 public class Visualizacao {
-    private Gafanhoto espectador; // Note que aqui tu está fazendo agraração da classe Gafanhoto
-    private Video filme; // Note que aqui tu está fazendo agraração da classe Video
+    private Gafanhoto espectador; 
+    private Video filme; 
 
     public Visualizacao(Gafanhoto espectador, Video filme) {
         this.espectador = espectador;
         this.filme = filme;
-        this.espectador.setTotAssistido(this.espectador.getTotAssistido() + 1); // Aqui na agregação tu está atribuindo + 1 diretamente ao total de videos assistidos pelo gafanhoto!
-        this.filme.setViews(this.filme.getViews() + 1); // Aqui tu está atribuindo +1 ao total de views do vídeo!
+        this.espectador.setTotAssistido(this.espectador.getTotAssistido() + 1);
+        this.filme.setViews(this.filme.getViews() + 1);
     }
 
     public Gafanhoto getEspectador() {
@@ -27,7 +19,7 @@ public class Visualizacao {
         this.espectador = espectador;
     }
     
-    public void avaliar(){ // Aqui está a sobreposição de sobrecarga
+    public void avaliar(){ 
         this.filme.setAvalaicao(5);
     }
     

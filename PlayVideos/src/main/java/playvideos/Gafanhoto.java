@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package playvideos;
 
-/**
- *
- * @author sousu
- */
 public class Gafanhoto extends Pessoa{
     private String login;
     private int totAssistido;
@@ -40,7 +32,7 @@ public class Gafanhoto extends Pessoa{
 
     @Override
     public String toString() {
-        return "Gafanhoto{" + super.toString() + "login=" + login + ", totAssistido=" + totAssistido + '}'; // Note que tu pode usar o + super.toStrong para pegar o toString da classe mãe!
+        return "Gafanhoto{" + super.toString() + "login=" + login + ", totAssistido=" + totAssistido + '}';
     }
     
     
