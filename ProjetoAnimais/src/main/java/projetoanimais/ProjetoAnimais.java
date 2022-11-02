@@ -1,14 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package projetoanimais;
 
-/**
- *
- * @author sousu
- */
 public class ProjetoAnimais {
 
     public static void main(String[] args) {
@@ -21,7 +12,7 @@ public class ProjetoAnimais {
         mamifero.emitirSom();
         mamifero.locomover();
         mamifero.detalhes();
-        
+
         Reptil lagarto = new Reptil();
         lagarto.setCorEscama("Verde");
         lagarto.setIdade(2);
@@ -31,21 +22,18 @@ public class ProjetoAnimais {
         lagarto.emitirSom();
         lagarto.locomover();
         lagarto.detalhes();
-        
+
         Peixe lambari = new Peixe();
         lambari.setCorEscama("Amarela");
         lambari.setIdade(1);
         lambari.setMembros(1);
-        lambari.setPeso(0.100f);      
+        lambari.setPeso(0.100f);
         lambari.locomover();
         lambari.emitirSom();
         lambari.soltarBolha();
         lambari.alimentar();
         lambari.detalhes();
-        
-        
-       
-        
+
         Ave passaro = new Ave();
         passaro.setCorPena("Branca");
         passaro.setIdade(8);
@@ -53,10 +41,10 @@ public class ProjetoAnimais {
         passaro.setPeso(2);
         passaro.fazerNinho();
         passaro.locomover();
-        passaro.emitirSom();      
+        passaro.emitirSom();
         passaro.alimentar();
         passaro.detalhes();
-        
+
         Canguru canguru = new Canguru();
         canguru.setCorPelo("Marrom");
         canguru.setIdade(8);
@@ -65,7 +53,7 @@ public class ProjetoAnimais {
         canguru.alimentar();
         canguru.usarBolsa();
         canguru.detalhes();
-        
+
         Cachorro fila = new Cachorro();
         fila.setIdade(9);
         fila.setCorPelo("Listrado");
@@ -77,7 +65,7 @@ public class ProjetoAnimais {
         fila.enterrarOsso();
         fila.emitirSom();
         fila.detalhes();
-        
+
         Cobra cobra = new Cobra();
         cobra.setIdade(3);
         cobra.setMembros(0);
@@ -86,8 +74,6 @@ public class ProjetoAnimais {
         cobra.alimentar();
         cobra.emitirSom();
         cobra.detalhes();
-        
-        
-        
- }
+
+    }
 }
